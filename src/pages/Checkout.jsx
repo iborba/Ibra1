@@ -26,7 +26,7 @@ function Checkout() {
     );
   }
 
-  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  const total = cart.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
 
   return (
     <div className="container">
@@ -40,7 +40,14 @@ function Checkout() {
           <label>Endereço:</label>
           <input value={address} onChange={e => setAddress(e.target.value)} required />
         </div>
-        <p>Total: R$ {total.toFixed(2)}</p>
+        <ul style={{marginBottom: 16}}>
+          {cart.map((item, idx) => (
+            <li key={idx}>
+              {item.name} - R$ {item.price.toFixed(2)} x {item.quantity || 1} = <b>R$ {(item.price * (item.quantity || 1)).toFixed(2)}</b>
+            </li>
+          ))}
+        </ul>
+        <p><b>Total: R$ {total.toFixed(2)}</b></p>
         <button type="submit">Finalizar pedido</button>
       </form>
     </div>

@@ -17,11 +17,18 @@ function Cart() {
     localStorage.setItem('cart', JSON.stringify(newCart));
   }
 
+  function updateQuantity(index, newQuantity) {
+    const newCart = [...cart];
+    newCart[index].quantity = newQuantity;
+    setCart(newCart);
+    localStorage.setItem('cart', JSON.stringify(newCart));
+  }
+
   function goToCheckout() {
     navigate('/checkout');
   }
 
-  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  const total = cart.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
 
   return (
     <div className="container">
@@ -33,8 +40,17 @@ function Cart() {
           <ul>
             {cart.map((item, idx) => (
               <li key={idx}>
-                {item.name} - R$ {item.price.toFixed(2)}
-                <button onClick={() => removeItem(idx)}>Remover</button>
+                {item.name} - R$ {item.price.toFixed(2)} x 
+                <input
+                  type="number"
+                  min="1"
+                  max="1000"
+                  value={item.quantity || 1}
+                  onChange={e => updateQuantity(idx, Number(e.target.value))}
+                  style={{ width: 60 }}
+                />
+                = <b>R$ {(item.price * (item.quantity || 1)).toFixed(2)}</b>
+                <button onClick={() => removeItem(idx)} style={{ marginLeft: 8 }}>Remover</button>
               </li>
             ))}
           </ul>
