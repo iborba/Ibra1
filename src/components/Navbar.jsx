@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/">🗑️ Sacos de Lixo</Link>
+        <Link to="/">🗑️ Sacos para Resíduos</Link>
       </div>
       <div className="navbar-links">
         <Link to="/">Início</Link>
