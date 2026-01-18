@@ -1,3 +1,19 @@
+.details-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #222;
+  color: #00e676;
+  border: 2px solid #00e676;
+  border-radius: 6px;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.details-btn:hover {
+  background: #00e676;
+  color: #181a1b;
+}
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -19,19 +35,32 @@ body {
 
 .navbar {
   background: #111;
-  padding: 16px;
+  padding: 16px 32px;
   display: flex;
-  gap: 24px;
-  border-bottom: 2px solid #444;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #00e676;
+}
+.navbar-brand a {
+  color: #00e676;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.navbar-links {
+  display: flex;
+  gap: 32px;
 }
 
-.navbar a {
+.navbar-links a {
   color: #f1f1f1;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.1rem;
   transition: color 0.2s;
 }
-.navbar a:hover {
+.navbar-links a:hover {
   color: #00e676;
 }
 
