@@ -10,6 +10,8 @@ function Navbar() {
       <div className="navbar-links">
         <Link to="/">Início</Link>
         <Link to="/carrinho">Carrinho</Link>
+        <Link to="/quem-somos">Quem Somos</Link>
+        <Link to="/contato">Contato</Link>
       </div>
     </nav>
   );

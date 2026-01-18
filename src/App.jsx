@@ -5,6 +5,8 @@ import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Navbar from './components/Navbar';
+import QuemSomos from './pages/QuemSomos';
+import Contato from './pages/Contato';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/produto/:id" element={<ProductDetail />} />
         <Route path="/carrinho" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/quem-somos" element={<QuemSomos />} />
+        <Route path="/contato" element={<Contato />} />
       </Routes>
     </Router>
   );
