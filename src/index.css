@@ -1,18 +1,18 @@
 .details-btn {
   display: inline-block;
   margin-top: 10px;
-  background: #222;
-  color: #00e676;
-  border: 2px solid #00e676;
-  border-radius: 6px;
+  background: #232136;
+  color: #43aaff;
+  border: 2px solid #43aaff;
+  border-radius: 8px;
   padding: 8px 16px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.2s, color 0.2s;
 }
 .details-btn:hover {
-  background: #00e676;
-  color: #181a1b;
+  background: #43aaff;
+  color: #232136;
 }
 
 body {
@@ -25,28 +25,29 @@ body {
 .container {
   max-width: 900px;
   margin: 32px auto;
-  background: #23272a;
+  background: #2a273f;
   padding: 32px;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px #0008;
-  border: 2px solid #444;
-}
+  border-radius: 16px;
+    border: 1.5px solid #43aaff;
+    background: #232136;
+    color: #e0def4;
 
 
 .navbar {
-  background: #111;
+  background: #232136;
   padding: 16px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid #00e676;
+  border-bottom: 2px solid #7f5af0;
 }
 .navbar-brand a {
-  color: #00e676;
+  color: #7f5af0;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
   letter-spacing: 1px;
+  text-shadow: 0 2px 8px #0004;
 }
 .navbar-links {
   display: flex;
@@ -54,14 +55,14 @@ body {
 }
 
 .navbar-links a {
-  color: #f1f1f1;
+  color: #e0def4;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
   transition: color 0.2s;
 }
 .navbar-links a:hover {
-  color: #00e676;
+  color: #7f5af0;
 }
 
 .products {
@@ -71,35 +72,36 @@ body {
 }
 
 .product-card {
-  background: #23272a;
-  border-radius: 8px;
+  background: #393552;
+  border-radius: 12px;
   padding: 20px;
   width: 220px;
-  box-shadow: 0 1px 8px #0008;
+  box-shadow: 0 1px 12px #0006;
   text-align: center;
-  border: 2px solid #444;
+  border: 2px solid #7f5af0;
   margin-bottom: 16px;
   transition: border 0.2s, box-shadow 0.2s;
 }
 .product-card:hover {
-  border: 2px solid #00e676;
-  box-shadow: 0 2px 16px #00e67644;
+  border: 2px solid #43aaff;
+  box-shadow: 0 2px 24px #43aaff44;
 }
 
 .product-card img {
   margin-bottom: 12px;
-  background: #111;
-  border-radius: 6px;
-  border: 1px solid #333;
+  background: #232136;
+  border-radius: 8px;
+  border: 1.5px solid #7f5af0;
   width: 120px;
   height: 120px;
   object-fit: contain;
+  box-shadow: 0 1px 8px #0004;
 }
 
 
 button, input[type="submit"] {
-  background: #00e676;
-  color: #181a1b;
+  background: #43aaff;
+  color: #232136;
   border: none;
   padding: 10px 18px;
   border-radius: 6px;
@@ -110,7 +112,7 @@ button, input[type="submit"] {
   transition: background 0.2s, color 0.2s;
 }
 button:hover, input[type="submit"]:hover {
-  background: #00b050;
+  background: #7f5af0;
   color: #fff;
 }
 
@@ -128,6 +130,6 @@ input[type="number"], input[type="text"], input[type="email"] {
   transition: border 0.2s;
 }
 input[type="number"]:focus, input[type="text"]:focus, input[type="email"]:focus {
-  border: 1.5px solid #a259e6;
+  border: 1.5px solid #43aaff;
   outline: none;
 }
