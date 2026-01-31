@@ -12,9 +12,9 @@ function Navbar() {
   }, [location.pathname]);
 
   const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About Us' },
-    { to: '/contact', label: 'Contact' },
+    { to: '/', label: 'Início' },
+    { to: '/about', label: 'Sobre Nós' },
+    { to: '/contact', label: 'Contato' },
   ];
 
   function isActive(path) {
@@ -49,7 +49,7 @@ function Navbar() {
               <circle cx="20" cy="21" r="1" />
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
             </svg>
-            Cart
+            Carrinho
             {totalItems > 0 && (
               <span className="nav__cart-badge">{totalItems}</span>
             )}
@@ -58,7 +58,7 @@ function Navbar() {
           <button
             className={`nav__hamburger ${menuOpen ? 'open' : ''}`}
             onClick={() => setMenuOpen((v) => !v)}
-            aria-label="Toggle menu"
+            aria-label="Alternar menu"
           >
             <span />
             <span />

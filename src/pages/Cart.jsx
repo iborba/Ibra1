@@ -12,8 +12,8 @@ function Cart() {
       <section className="section">
         <div className="section-inner">
           <div className="section-header">
-            <span className="section-header__eyebrow">Your Selection</span>
-            <h1>Shopping Cart</h1>
+            <span className="section-header__eyebrow">Sua Seleção</span>
+            <h1>Carrinho de Compras</h1>
           </div>
 
           {items.length === 0 ? (
@@ -25,9 +25,9 @@ function Cart() {
                   <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
                 </svg>
               </div>
-              <p className="cart-empty__text">Your cart is empty</p>
+              <p className="cart-empty__text">Seu carrinho está vazio</p>
               <Link to="/" className="btn btn--primary">
-                Start Shopping
+                Começar a Comprar
               </Link>
             </div>
           ) : (
@@ -46,7 +46,7 @@ function Cart() {
                         <div className="cart-item__name">{item.name}</div>
                       </Link>
                       <div className="cart-item__price">
-                        ${item.price.toFixed(2)} each
+                        R$ {item.price.toFixed(2).replace('.', ',')} cada
                       </div>
                       <div className="cart-item__controls">
                         <div className="cart-item__qty">
@@ -54,7 +54,7 @@ function Cart() {
                             onClick={() =>
                               updateQuantity(item.id, item.quantity - 1)
                             }
-                            aria-label="Decrease"
+                            aria-label="Diminuir"
                           >
                             -
                           </button>
@@ -63,19 +63,19 @@ function Cart() {
                             onClick={() =>
                               updateQuantity(item.id, item.quantity + 1)
                             }
-                            aria-label="Increase"
+                            aria-label="Aumentar"
                           >
                             +
                           </button>
                         </div>
                         <span className="cart-item__subtotal">
-                          ${(item.price * item.quantity).toFixed(2)}
+                          R$ {(item.price * item.quantity).toFixed(2).replace('.', ',')}
                         </span>
                         <button
                           className="cart-item__remove"
                           onClick={() => removeItem(item.id)}
                         >
-                          Remove
+                          Remover
                         </button>
                       </div>
                     </div>
@@ -85,28 +85,28 @@ function Cart() {
 
               {/* Summary */}
               <div className="cart-summary">
-                <h3 className="cart-summary__title">Order Summary</h3>
+                <h3 className="cart-summary__title">Resumo do Pedido</h3>
                 <div className="cart-summary__row">
-                  <span>Items ({totalItems})</span>
-                  <span>${totalPrice.toFixed(2)}</span>
+                  <span>Itens ({totalItems})</span>
+                  <span>R$ {totalPrice.toFixed(2).replace('.', ',')}</span>
                 </div>
                 <div className="cart-summary__row">
-                  <span>Shipping</span>
-                  <span className="text-accent">Free</span>
+                  <span>Frete</span>
+                  <span className="text-accent">Grátis</span>
                 </div>
                 <div className="cart-summary__row total">
                   <span>Total</span>
-                  <span>${totalPrice.toFixed(2)}</span>
+                  <span>R$ {totalPrice.toFixed(2).replace('.', ',')}</span>
                 </div>
                 <button className="btn btn--primary" style={{ width: '100%' }}>
-                  Proceed to Checkout
+                  Finalizar Compra
                 </button>
                 <button
                   className="btn btn--outline btn--sm"
                   style={{ width: '100%' }}
                   onClick={clearCart}
                 >
-                  Clear Cart
+                  Limpar Carrinho
                 </button>
               </div>
             </div>

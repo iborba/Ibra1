@@ -14,11 +14,11 @@ function Contact() {
       <section className="section">
         <div className="section-inner">
           <div className="section-header" style={{ textAlign: 'center', alignItems: 'center' }}>
-            <span className="section-header__eyebrow">Get in Touch</span>
-            <h1>Contact Us</h1>
+            <span className="section-header__eyebrow">Fale Conosco</span>
+            <h1>Contato</h1>
             <p className="section-header__desc" style={{ maxWidth: 560, margin: '0 auto' }}>
-              Have a question about our products, partnerships, or wholesale
-              orders? We'd love to hear from you.
+              Tem alguma dúvida sobre nossos produtos, parcerias ou pedidos por
+              atacado? Adoraríamos ouvir você.
             </p>
           </div>
 
@@ -27,61 +27,60 @@ function Contact() {
             <div>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '48px 0' }}>
-                  <h2 className="text-accent">Thank you!</h2>
+                  <h2 className="text-accent">Obrigado!</h2>
                   <p className="text-muted mt-sm">
-                    Your message has been received. We'll get back to you within
-                    24 hours.
+                    Sua mensagem foi recebida. Retornaremos em até 24 horas.
                   </p>
                   <button
                     className="btn btn--outline mt-md"
                     onClick={() => setSubmitted(false)}
                   >
-                    Send another message
+                    Enviar outra mensagem
                   </button>
                 </div>
               ) : (
                 <form className="contact-form" onSubmit={handleSubmit}>
                   <div className="form-group">
-                    <label htmlFor="name">Full Name</label>
+                    <label htmlFor="name">Nome Completo</label>
                     <input
                       id="name"
                       type="text"
                       className="form-input"
-                      placeholder="Jane Doe"
+                      placeholder="Maria Silva"
                       required
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">E-mail</label>
                     <input
                       id="email"
                       type="email"
                       className="form-input"
-                      placeholder="jane@example.com"
+                      placeholder="maria@exemplo.com"
                       required
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="subject">Subject</label>
+                    <label htmlFor="subject">Assunto</label>
                     <input
                       id="subject"
                       type="text"
                       className="form-input"
-                      placeholder="Product inquiry"
+                      placeholder="Dúvida sobre produto"
                       required
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message">Mensagem</label>
                     <textarea
                       id="message"
                       className="form-input"
-                      placeholder="Tell us what you need..."
+                      placeholder="Conte-nos como podemos ajudar..."
                       required
                     />
                   </div>
                   <button type="submit" className="btn btn--primary">
-                    Send Message
+                    Enviar Mensagem
                   </button>
                 </form>
               )}
@@ -97,9 +96,9 @@ function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="contact-info-card__title">Email</h4>
-                  <p className="contact-info-card__text">hello@replastic.co</p>
-                  <p className="contact-info-card__text">We reply within 24 h</p>
+                  <h4 className="contact-info-card__title">E-mail</h4>
+                  <p className="contact-info-card__text">contato@replastic.com.br</p>
+                  <p className="contact-info-card__text">Respondemos em até 24 h</p>
                 </div>
               </div>
 
@@ -110,9 +109,9 @@ function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="contact-info-card__title">Phone</h4>
-                  <p className="contact-info-card__text">+1 (555) 123-4567</p>
-                  <p className="contact-info-card__text">Mon-Fri, 9 AM - 6 PM EST</p>
+                  <h4 className="contact-info-card__title">Telefone</h4>
+                  <p className="contact-info-card__text">+55 (11) 4002-8922</p>
+                  <p className="contact-info-card__text">Seg-Sex, 9h - 18h</p>
                 </div>
               </div>
 
@@ -124,10 +123,10 @@ function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="contact-info-card__title">Office</h4>
+                  <h4 className="contact-info-card__title">Escritório</h4>
                   <p className="contact-info-card__text">
-                    42 Green Loop Drive<br />
-                    Portland, OR 97201
+                    Rua da Reciclagem, 42<br />
+                    São Paulo, SP — 01310-100
                   </p>
                 </div>
               </div>
@@ -140,10 +139,10 @@ function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="contact-info-card__title">Business Hours</h4>
+                  <h4 className="contact-info-card__title">Horário de Funcionamento</h4>
                   <p className="contact-info-card__text">
-                    Monday - Friday: 9 AM - 6 PM<br />
-                    Saturday: 10 AM - 2 PM
+                    Segunda a Sexta: 9h - 18h<br />
+                    Sábado: 10h - 14h
                   </p>
                 </div>
               </div>
