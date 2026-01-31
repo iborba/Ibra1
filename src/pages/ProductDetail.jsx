@@ -17,12 +17,12 @@ function ProductDetail() {
       <div className="page-wrapper">
         <section className="section">
           <div className="section-inner" style={{ textAlign: 'center', padding: '80px 0' }}>
-            <h1>Product not found</h1>
+            <h1>Produto não encontrado</h1>
             <p className="text-muted mt-sm">
-              The product you're looking for doesn't exist or has been removed.
+              O produto que você procura não existe ou foi removido.
             </p>
             <Link to="/" className="btn btn--primary mt-md">
-              Back to Shop
+              Voltar à Loja
             </Link>
           </div>
         </section>
@@ -32,7 +32,7 @@ function ProductDetail() {
 
   function handleAdd() {
     addItem(product, quantity);
-    setToast(`${quantity}x ${product.name} added to cart`);
+    setToast(`${quantity}x ${product.name} adicionado ao carrinho`);
     setQuantity(1);
   }
 
@@ -44,7 +44,7 @@ function ProductDetail() {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
             </svg>
-            Back to products
+            Voltar aos produtos
           </Link>
 
           <div className="detail">
@@ -58,15 +58,15 @@ function ProductDetail() {
               <p className="detail__desc">{product.description}</p>
 
               <div className="detail__price">
-                ${product.price.toFixed(2)} <span>USD</span>
+                R$ {product.price.toFixed(2).replace('.', ',')} <span>BRL</span>
               </div>
 
               <div className="detail__quantity">
-                <span className="detail__quantity-label">Quantity</span>
+                <span className="detail__quantity-label">Quantidade</span>
                 <button
                   className="detail__qty-btn"
                   onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                  aria-label="Decrease quantity"
+                  aria-label="Diminuir quantidade"
                 >
                   -
                 </button>
@@ -74,7 +74,7 @@ function ProductDetail() {
                 <button
                   className="detail__qty-btn"
                   onClick={() => setQuantity((q) => q + 1)}
-                  aria-label="Increase quantity"
+                  aria-label="Aumentar quantidade"
                 >
                   +
                 </button>
@@ -82,10 +82,10 @@ function ProductDetail() {
 
               <div className="detail__actions">
                 <button className="btn btn--primary" onClick={handleAdd}>
-                  Add to Cart
+                  Adicionar ao Carrinho
                 </button>
                 <Link to="/cart" className="btn btn--outline">
-                  View Cart
+                  Ver Carrinho
                 </Link>
               </div>
 
@@ -94,25 +94,25 @@ function ProductDetail() {
                   <span className="detail__feature-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                   </span>
-                  100% Recycled
+                  100% Reciclado
                 </div>
                 <div className="detail__feature">
                   <span className="detail__feature-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                   </span>
-                  Durable design
+                  Design durável
                 </div>
                 <div className="detail__feature">
                   <span className="detail__feature-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                   </span>
-                  Free shipping
+                  Frete grátis
                 </div>
                 <div className="detail__feature">
                   <span className="detail__feature-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                   </span>
-                  Take-back program
+                  Programa de devolução
                 </div>
               </div>
             </div>

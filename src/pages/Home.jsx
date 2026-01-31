@@ -6,18 +6,18 @@ import Toast from '../components/Toast';
 import Footer from '../components/Footer';
 
 function Home() {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('Todos');
   const [toast, setToast] = useState(null);
   const { addItem } = useCart();
 
   const filtered =
-    activeCategory === 'All'
+    activeCategory === 'Todos'
       ? products
       : products.filter((p) => p.category === activeCategory);
 
   function handleAdd(product) {
     addItem(product, 1);
-    setToast(`${product.name} added to cart`);
+    setToast(`${product.name} adicionado ao carrinho`);
   }
 
   return (
@@ -26,36 +26,36 @@ function Home() {
       <section className="section">
         <div className="section-inner hero">
           <div className="hero__content">
-            <span className="hero__badge">Sustainable by design</span>
+            <span className="hero__badge">Sustentável por design</span>
             <h1 className="hero__title">
-              Products made from <span>recycled plastic</span>
+              Produtos feitos de <span>plástico reciclado</span>
             </h1>
             <p className="hero__desc">
-              From ocean waste to your doorstep. Every product in our catalog is
-              crafted from post-consumer recycled plastic — durable, beautiful,
-              and kind to the planet.
+              Do resíduo do oceano até a sua porta. Cada produto do nosso
+              catálogo é feito de plástico reciclado pós-consumo — durável,
+              bonito e gentil com o planeta.
             </p>
             <div className="hero__actions">
               <a href="#products" className="btn btn--primary">
-                Browse Products
+                Ver Produtos
               </a>
               <Link to="/about" className="btn btn--outline">
-                Our Story
+                Nossa História
               </Link>
             </div>
 
             <div className="hero__stats">
               <div>
                 <div className="hero__stat-value">50 t</div>
-                <div className="hero__stat-label">Plastic diverted</div>
+                <div className="hero__stat-label">Plástico desviado</div>
               </div>
               <div>
-                <div className="hero__stat-value">12k+</div>
-                <div className="hero__stat-label">Happy customers</div>
+                <div className="hero__stat-value">12 mil+</div>
+                <div className="hero__stat-label">Clientes satisfeitos</div>
               </div>
               <div>
                 <div className="hero__stat-value">100%</div>
-                <div className="hero__stat-label">Recycled materials</div>
+                <div className="hero__stat-label">Materiais reciclados</div>
               </div>
             </div>
           </div>
@@ -66,20 +66,20 @@ function Home() {
       <section className="section" id="products">
         <div className="section-inner">
           <div className="section-header">
-            <span className="section-header__eyebrow">Our Catalog</span>
-            <h2>Browse our products</h2>
+            <span className="section-header__eyebrow">Nosso Catálogo</span>
+            <h2>Conheça nossos produtos</h2>
             <p className="section-header__desc">
-              Each item is designed to last and made entirely from recycled
-              materials. Filter by category to find exactly what you need.
+              Cada item é projetado para durar e feito inteiramente de materiais
+              reciclados. Filtre por categoria para encontrar o que você precisa.
             </p>
           </div>
 
           <div className="filter-pills">
             <button
-              className={`filter-pill ${activeCategory === 'All' ? 'active' : ''}`}
-              onClick={() => setActiveCategory('All')}
+              className={`filter-pill ${activeCategory === 'Todos' ? 'active' : ''}`}
+              onClick={() => setActiveCategory('Todos')}
             >
-              All
+              Todos
             </button>
             {categories.map((cat) => (
               <button
@@ -111,12 +111,12 @@ function Home() {
                   <p className="product-card__desc">{product.shortDescription}</p>
                   <div className="product-card__footer">
                     <span className="product-card__price">
-                      ${product.price.toFixed(2)}
+                      R$ {product.price.toFixed(2).replace('.', ',')}
                     </span>
                     <button
                       className="product-card__add-btn"
                       onClick={() => handleAdd(product)}
-                      aria-label={`Add ${product.name} to cart`}
+                      aria-label={`Adicionar ${product.name} ao carrinho`}
                     >
                       +
                     </button>
