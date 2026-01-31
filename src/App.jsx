@@ -1,25 +1,26 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import ProductDetail from './pages/ProductDetail';
-import Cart from './pages/Cart';
-import Checkout from './pages/Checkout';
+import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
-import QuemSomos from './pages/QuemSomos';
-import Contato from './pages/Contato';
+import Home from './pages/Home';
+import About from './pages/About';
+import ProductDetail from './pages/ProductDetail';
+import Contact from './pages/Contact';
+import Cart from './pages/Cart';
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/produto/:id" element={<ProductDetail />} />
-        <Route path="/carrinho" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/quem-somos" element={<QuemSomos />} />
-        <Route path="/contato" element={<Contato />} />
-      </Routes>
+      <CartProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </CartProvider>
     </Router>
   );
 }
