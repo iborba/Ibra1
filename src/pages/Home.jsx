@@ -26,14 +26,14 @@ function Home() {
       <section className="section">
         <div className="section-inner hero">
           <div className="hero__content">
-            <span className="hero__badge">Sustentável por design</span>
+            <span className="hero__badge">100% Plástico Reciclado</span>
             <h1 className="hero__title">
-              Produtos feitos de <span>plástico reciclado</span>
+              Sacos de lixo e <span>materiais de limpeza</span>
             </h1>
             <p className="hero__desc">
-              Do resíduo do oceano até a sua porta. Cada produto do nosso
-              catálogo é feito de plástico reciclado pós-consumo — durável,
-              bonito e gentil com o planeta.
+              Na Plásticos da Dá, fabricamos sacos de lixo residenciais e
+              industriais, além de materiais de limpeza — tudo feito com
+              plástico reciclado. Resistência e sustentabilidade juntas.
             </p>
             <div className="hero__actions">
               <a href="#products" className="btn btn--primary">

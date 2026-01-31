@@ -9,13 +9,13 @@ function About() {
           <div className="about-hero">
             <span className="hero__badge">Quem somos</span>
             <h1 className="about-hero__title">
-              Transformando resíduos em <span>maravilhas</span>
+              Transformando resíduos em <span>soluções de limpeza</span>
             </h1>
             <p className="about-hero__desc">
-              A RePlastic nasceu de uma crença simples: plástico descartado não
-              precisa continuar descartado. Nós coletamos, processamos e
-              transformamos plástico pós-consumo em produtos que as pessoas
-              realmente querem usar no dia a dia.
+              A Plásticos da Dá nasceu de uma crença simples: plástico
+              descartado pode virar produto de qualidade. Fabricamos sacos de
+              lixo e materiais de limpeza a partir de plástico reciclado
+              pós-consumo — resistentes, acessíveis e sustentáveis.
             </p>
           </div>
 
@@ -46,9 +46,9 @@ function About() {
               </div>
               <h3 className="about-card__title">Feito para Durar</h3>
               <p className="about-card__text">
-                Reciclado não significa frágil. Nossos produtos são projetados
-                para igualar ou superar a durabilidade de alternativas com
-                material virgem, com garantia de múltiplos anos.
+                Reciclado não significa frágil. Nossos sacos de lixo e
+                materiais de limpeza são projetados para igualar ou superar
+                a resistência de alternativas com material virgem.
               </p>
             </div>
 
@@ -93,9 +93,9 @@ function About() {
               </div>
               <h3 className="about-card__title">Design Circular</h3>
               <p className="about-card__text">
-                Cada produto RePlastic é projetado para ser reciclado novamente
-                ao fim de sua vida útil. Oferecemos um programa de devolução
-                para que nada que fabricamos vá para o aterro.
+                Cada produto Plásticos da Dá é projetado para ser reciclado
+                novamente ao fim de sua vida útil. Oferecemos um programa de
+                devolução para que nada que fabricamos vá para o aterro.
               </p>
             </div>
 
