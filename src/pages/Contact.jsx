@@ -17,8 +17,8 @@ function Contact() {
             <span className="section-header__eyebrow">Fale Conosco</span>
             <h1>Contato</h1>
             <p className="section-header__desc" style={{ maxWidth: 560, margin: '0 auto' }}>
-              Tem alguma dúvida sobre nossos produtos, parcerias ou pedidos por
-              atacado? Adoraríamos ouvir você.
+              Dúvidas sobre sacos de lixo, materiais de limpeza, pedidos por
+              atacado ou parcerias? Fale com a gente.
             </p>
           </div>
 
@@ -97,7 +97,7 @@ function Contact() {
                 </div>
                 <div>
                   <h4 className="contact-info-card__title">E-mail</h4>
-                  <p className="contact-info-card__text">contato@replastic.com.br</p>
+                  <p className="contact-info-card__text">contato@plasticosdada.com.br</p>
                   <p className="contact-info-card__text">Respondemos em até 24 h</p>
                 </div>
               </div>

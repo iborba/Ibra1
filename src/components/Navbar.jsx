@@ -26,8 +26,8 @@ function Navbar() {
     <>
       <nav className="nav">
         <Link to="/" className="nav__logo">
-          <span className="nav__logo-icon">RP</span>
-          RePlastic
+          <span className="nav__logo-icon">PD</span>
+          Plásticos da Dá
         </Link>
 
         <div className="nav__links">

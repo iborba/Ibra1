@@ -7,12 +7,12 @@ function Footer() {
       <div className="footer__inner">
         <div className="footer__brand">
           <div className="footer__brand-name">
-            <span className="text-accent">RP</span> RePlastic
+            <span className="text-accent">PD</span> Plásticos da Dá
           </div>
           <p className="footer__brand-desc">
-            Produtos do dia a dia feitos de plástico reciclado. Transformamos
-            resíduos em produtos duráveis e bonitos — para que você viva de
-            forma sustentável sem abrir mão de nada.
+            Sacos de lixo residenciais e industriais, materiais de limpeza —
+            tudo fabricado com plástico reciclado. Qualidade, resistência e
+            compromisso com o meio ambiente.
           </p>
         </div>
 
@@ -20,9 +20,8 @@ function Footer() {
           <h4 className="footer__col-title">Loja</h4>
           <div className="footer__links">
             <Link to="/">Todos os Produtos</Link>
-            <Link to="/">Jardim</Link>
-            <Link to="/">Casa</Link>
-            <Link to="/">Acessórios</Link>
+            <Link to="/">Sacos de Lixo</Link>
+            <Link to="/">Limpeza Residencial</Link>
           </div>
         </div>
 
@@ -37,8 +36,8 @@ function Footer() {
       </div>
 
       <div className="footer__bottom">
-        &copy; {new Date().getFullYear()} RePlastic. Todos os direitos
-        reservados. Feito com pixels reciclados.
+        &copy; {new Date().getFullYear()} Plásticos da Dá. Todos os direitos
+        reservados.
       </div>
     </footer>
   );
