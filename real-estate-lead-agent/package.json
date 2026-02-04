@@ -1,0 +1,37 @@
+{
+  "name": "real-estate-lead-agent",
+  "version": "1.0.0",
+  "description": "Agente inteligente para captura de leads de imobiliárias com sites que possuem filtro de imóveis e formulário de contato",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "agent:run": "ts-node src/index.ts --mode=run",
+    "agent:schedule": "ts-node src/index.ts --mode=schedule",
+    "agent:dry-run": "ts-node src/index.ts --mode=dry-run",
+    "migrate": "ts-node src/database/migrate.ts",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.0",
+    "node-cron": "^3.0.3",
+    "puppeteer": "^21.6.0",
+    "winston": "^3.11.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "private": true
+}
